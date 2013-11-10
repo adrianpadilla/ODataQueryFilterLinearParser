@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4264DAA0-94B9-41C5-A348-136342899168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryFilterLinearParser", "src\QueryFilterLinearParser.csproj", "{F8B6C982-0F8B-480A-B273-B0126AF2272B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D5D07C80-9867-4BE0-A7D7-DBF85480E7A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryFilterLinearParser.Test", "test\QueryFilterLinearParser.Test.csproj", "{0FE7D24C-4124-470B-B428-AF84F4D8195B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8B6C982-0F8B-480A-B273-B0126AF2272B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B6C982-0F8B-480A-B273-B0126AF2272B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B6C982-0F8B-480A-B273-B0126AF2272B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B6C982-0F8B-480A-B273-B0126AF2272B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE7D24C-4124-470B-B428-AF84F4D8195B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE7D24C-4124-470B-B428-AF84F4D8195B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE7D24C-4124-470B-B428-AF84F4D8195B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE7D24C-4124-470B-B428-AF84F4D8195B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8B6C982-0F8B-480A-B273-B0126AF2272B} = {4264DAA0-94B9-41C5-A348-136342899168}
+		{0FE7D24C-4124-470B-B428-AF84F4D8195B} = {D5D07C80-9867-4BE0-A7D7-DBF85480E7A9}
+	EndGlobalSection
+EndGlobal
