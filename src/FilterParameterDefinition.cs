@@ -30,7 +30,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser
         /// <summary>
         /// Modifier applied to the field, such as toUpper, etc.
         /// </summary>
-        public string Modifier { get; set; }
+        public string Modifiers { get; set; }
 
     }
 }
