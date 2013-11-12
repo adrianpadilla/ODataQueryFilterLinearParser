@@ -67,9 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="QueryStringParser.cs" />
-    <Compile Include="FilteringOperator.cs" />
     <Compile Include="FilterParameterDefinition.cs" />
-    <Compile Include="ODataFilterParameterDictionary.cs" />
+    <Compile Include="ODataFilterParameterCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryInformation.cs" />
   </ItemGroup>

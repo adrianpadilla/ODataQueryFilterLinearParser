@@ -305,5 +305,50 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
 
         }
 
+
+        /// <summary>
+        /// This scenario is not currently supported. We just need to ensure
+        /// an exception is not thrown.
+        /// </summary>
+        [TestMethod]
+        public void UsingToStringOfToLowerNoException()
+        {
+            // Arrange
+            string query = "substringof('soft',tolower(Name)) eq true";
+
+            QueryStringParser parser = null;
+
+            // Act
+            var info = GetQueryInformation(query, CompaniesContext, out parser);
+
+            // Assert
+            // Exception wasn't thrown
+        }
+
+
+        /// <summary>
+        /// This scenario is not currently supported. We just need to ensure
+        /// this warning of this parameter being skipped is logged.
+        /// </summary>
+        [TestMethod]
+        [TestCategory("NotResolved")]
+        [Ignore]
+        public void UsingToStringOfToLower()
+        {
+            // Arrange
+            string query = "substringof('soft',tolower(Name)) eq true";
+
+            QueryStringParser parser = null;
+
+            // Act
+            var info = GetQueryInformation(query, CompaniesContext, out parser);
+
+            // Assert
+            Assert.AreEqual<int>(1, parser.Warnings.Count, "The parser didn't file the warning as expected.");
+            Assert.AreEqual<string>("The parser currently not supports 'substringof('soft',tolower(Name)) eq true'", parser.Warnings.ElementAt<string>(0), "The warning wasn't logged properly.");
+
+        }
+
+
     }
 }
