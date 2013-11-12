@@ -64,7 +64,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
             Assert.IsTrue(info.FilterParameters.Exists(p => p.FieldName == "Name"), "The field collection doesn't contain an element with Field Name 'Name'.");
             var parameter = info.FilterParameters.Find(p => p.FieldName == "Name");
             Assert.AreEqual<string>("Microsoft", parameter.StringValue, "The value of the parameter is not the one expected.");
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.Equal, parameter.FilteringOperator, "The filtering operator is not the expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.Equal, parameter.FilteringOperator, "The filtering operator is not the expected.");
             AssertNoWarningsOrExceptions(parser);
 
         }
@@ -83,12 +83,12 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
             Assert.IsTrue(info.FilterParameters.Exists(p => p.FieldName == "Name"), "The field collection doesn't contain an element with Field Name 'Name'.");
             var parameter = info.FilterParameters.Find(p => p.FieldName == "Name");
             Assert.AreEqual<string>("Microsoft", parameter.StringValue, "The value of the parameter is not the one expected.");
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.Equal, parameter.FilteringOperator, "The filtering operator is not the expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.Equal, parameter.FilteringOperator, "The filtering operator is not the expected.");
 
             Assert.IsTrue(info.FilterParameters.Exists(p => p.FieldName == "Industry"), "The field collection doesn't contain an element with Field Name 'Industry'.");
             var parameter2 = info.FilterParameters.Find(p => p.FieldName == "Industry");
             Assert.AreEqual<string>("Computer Software", parameter2.StringValue, "The value of the parameter is not the one expected.");
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.Equal, parameter2.FilteringOperator, "The filtering operator is not the expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.Equal, parameter2.FilteringOperator, "The filtering operator is not the expected.");
 
             AssertNoWarningsOrExceptions(parser);
 
@@ -108,17 +108,17 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
             Assert.IsTrue(info.FilterParameters.Exists(p => p.FieldName == "Name"), "The field collection doesn't contain an element with Field Name 'Name'.");
             var parameter = info.FilterParameters.Find(p => p.FieldName == "Name");
             Assert.AreEqual<string>("Microsoft", parameter.StringValue, "The value of the parameter is not the one expected.");
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.Equal, parameter.FilteringOperator, "The filtering operator is not the expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.Equal, parameter.FilteringOperator, "The filtering operator is not the expected.");
 
             Assert.IsTrue(info.FilterParameters.Exists(p => p.FieldName == "Industry"), "The field collection doesn't contain an element with Field Name 'Industry'.");
             var parameter2 = info.FilterParameters.Find(p => p.FieldName == "Industry");
             Assert.AreEqual<string>("Computer Software", parameter2.StringValue, "The value of the parameter is not the one expected.");
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.Equal, parameter2.FilteringOperator, "The filtering operator is not the expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.Equal, parameter2.FilteringOperator, "The filtering operator is not the expected.");
 
             Assert.IsTrue(info.FilterParameters.Exists(p => p.FieldName == "Headquarters"), "The field collection doesn't contain an element with Field Name 'Headquarters'.");
             var parameter3 = info.FilterParameters.Find(p => p.FieldName == "Headquarters");
             Assert.AreEqual<string>("Redmond, WA", parameter3.StringValue, "The value of the parameter is not the one expected.");
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.Equal, parameter3.FilteringOperator, "The filtering operator is not the expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.Equal, parameter3.FilteringOperator, "The filtering operator is not the expected.");
 
             AssertNoWarningsOrExceptions(parser);
 
@@ -211,7 +211,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
             Assert.IsTrue(info.FilterParameters.Exists(matchRevenue));
             Assert.AreEqual<int>(1, info.FilterParameters.FindAll(matchRevenue).Count);
             var parameter = info.FilterParameters.Find(matchRevenue);
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.GreaterThan, parameter.FilteringOperator, "The filtering operator was not the type expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.GreaterThan, parameter.FilteringOperator, "The filtering operator was not the type expected.");
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
             Assert.IsTrue(info.FilterParameters.Exists(matchRevenue));
             Assert.AreEqual<int>(1, info.FilterParameters.FindAll(matchRevenue).Count);
             var parameter = info.FilterParameters.Find(matchRevenue);
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.LessThan, parameter.FilteringOperator, "The filtering operator was not the type expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.LessThan, parameter.FilteringOperator, "The filtering operator was not the type expected.");
         }
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
             Assert.IsTrue(info.FilterParameters.Exists(matchRevenue));
             Assert.AreEqual<int>(1, info.FilterParameters.FindAll(matchRevenue).Count);
             var parameter = info.FilterParameters.Find(matchRevenue);
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.GreaterThanOrEqual, parameter.FilteringOperator, "The filtering operator was not the type expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.GreaterThanOrEqual, parameter.FilteringOperator, "The filtering operator was not the type expected.");
         }
 
         /// <summary>
@@ -280,7 +280,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
             Assert.IsTrue(info.FilterParameters.Exists(matchRevenue));
             Assert.AreEqual<int>(1, info.FilterParameters.FindAll(matchRevenue).Count);
             var parameter = info.FilterParameters.Find(matchRevenue);
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.LessThanOrEqual, parameter.FilteringOperator, "The filtering operator was not the type expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.LessThanOrEqual, parameter.FilteringOperator, "The filtering operator was not the type expected.");
         }
 
         [TestMethod]
@@ -300,7 +300,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser.Test
             Assert.IsTrue(info.FilterParameters.Exists(matchRevenue), "The expected filter parameter doesnt exist.");
             Assert.AreEqual<int>(1, info.FilterParameters.FindAll(matchRevenue).Count);
             var parameter = info.FilterParameters.Find(matchRevenue);
-            Assert.AreEqual<BinaryOperatorKind>(BinaryOperatorKind.Equal, parameter.FilteringOperator, "The filtering operator was not the type expected.");
+            Assert.AreEqual<FilteringOperator>(FilteringOperator.Equal, parameter.FilteringOperator, "The filtering operator was not the type expected.");
             Assert.AreEqual<string>("tolower", parameter.Modifiers, "The modifier isn't the one expected.");
 
         }

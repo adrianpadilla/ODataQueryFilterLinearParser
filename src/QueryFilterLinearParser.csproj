@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FilteringOperator.cs" />
     <Compile Include="QueryStringParser.cs" />
     <Compile Include="FilterParameterDefinition.cs" />
     <Compile Include="ODataFilterParameterCollection.cs" />

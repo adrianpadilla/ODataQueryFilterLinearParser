@@ -25,7 +25,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser
         /// <summary>
         /// The operator of the filtering or comparison being done by this parameter.
         /// </summary>
-        public BinaryOperatorKind FilteringOperator { get; set; }
+        public FilteringOperator FilteringOperator { get; set; }
 
         /// <summary>
         /// Modifier applied to the field, such as toUpper, etc.

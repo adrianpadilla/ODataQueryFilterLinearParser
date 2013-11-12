@@ -156,7 +156,7 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser
                 FilterParameterDefinition filterdefinition = new FilterParameterDefinition();
 
                 // Populating common values.
-                filterdefinition.FilteringOperator = binaryNode.OperatorKind;
+                filterdefinition.FilteringOperator = (FilteringOperator) binaryNode.OperatorKind;
                 filterdefinition.StringValue = constantNode.Value.ToString();
 
                 

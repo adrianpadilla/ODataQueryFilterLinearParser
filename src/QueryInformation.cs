@@ -11,6 +11,9 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser
     /// </summary>
     public class QueryInformation
     {
+        /// <summary>
+        /// Collection of parsed parameter definitions.
+        /// </summary>
         public ODataFilterParameterCollection FilterParameters { get; set; }
     }
 }
