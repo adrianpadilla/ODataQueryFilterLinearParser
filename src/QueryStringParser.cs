@@ -106,7 +106,16 @@ namespace AdrianPadilla.Net.OData.QueryFilterLinearParser
                 }
                 else
                 {
-                    LogWarning(string.Format("Node wasn't casted as binary node. Type is {0}", node.GetType().FullName));
+                    var convertNode = node as ConvertNode;
+
+                    if (convertNode != null)
+                    {
+                        BinarySearchForNodes(convertNode.Source, info);
+                    }
+                    else
+                    {
+                        LogWarning(string.Format("Node wasn't casted as binary node. Type is {0}", node.GetType().FullName));
+                    }
                 }
             }
             catch (Exception ex)
